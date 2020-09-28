@@ -1,0 +1,9 @@
+import string 
+def func(n,alphabet=string.ascii_lowercase):
+	alphabet=list(alphabet)
+	n=n.lower()
+	for i in range(0,len(n)): 
+		if n[i] in alphabet: 
+			alphabet.remove(n[i])
+	return len(alphabet)==0
+print(func("The quick brofox jumps over the lazy dog"))
